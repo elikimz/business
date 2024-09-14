@@ -21,23 +21,23 @@ const AboutUs: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
     arrows: true, // Show navigation arrows
   };
 
   return (
-    <div className="relative overflow-hidden bg-gray-50">
+    <div className="relative overflow-hidden py-12 bg-gradient-to-r from-blue-100 via-teal-100 to-blue-200">
       {/* Background Color */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-50 via-gray-100 to-blue-50" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-100 via-teal-100 to-blue-200 opacity-70" />
 
-      <div className="container mx-auto py-12 px-4 relative z-10 flex flex-col items-center">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800 transform transition-transform duration-500 hover:scale-105">
+      <div className="container mx-auto py-12 px-4 relative z-10 flex flex-col items-center border-4 border-teal-900 rounded-lg shadow-lg bg-white bg-opacity-70 backdrop-blur-lg">
+        <h1 className="text-4xl font-bold text-center mb-8 text-teal-900">
           About Us
         </h1>
-        <p className="text-lg text-gray-800 max-w-3xl mx-auto text-center mb-8 transform transition-transform duration-500 hover:scale-105">
+        <p className="text-lg text-teal-800 max-w-3xl mx-auto text-center mb-8">
           We are a company dedicated to providing the highest quality carpets and mats to enhance the beauty and comfort of your home or office. Our mission is to offer a wide variety of designs to match any aesthetic, along with excellent customer service.
         </p>
-        <div className="w-full h-72">
+        <div className="w-full max-w-3xl h-80">
           <Slider {...settings} className="w-full h-full">
             {images.map((src, index) => (
               <div key={index} className="w-full h-full relative overflow-hidden rounded-lg shadow-lg">
