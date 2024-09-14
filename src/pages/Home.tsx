@@ -49,7 +49,7 @@ const Home = () => {
                 <Link to="/AboutUs" className="text-[#e74c3c] hover:text-[#ecf0f1]">About</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-[#e74c3c] hover:text-[#ecf0f1]">Contact</Link>
+                <Link to="/contacts" className="text-[#e74c3c] hover:text-[#ecf0f1]">Contact</Link>
               </li>
             </ul>
           </nav>
