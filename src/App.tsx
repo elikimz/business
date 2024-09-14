@@ -3,6 +3,7 @@ import Home  from './pages/Home'
 import Shop from'./pages/shop'
 import AboutUs from './pages/about'
 import Contact from './pages/contacts'
+import Explore from './pages/explor'
 
 
 
@@ -29,7 +30,12 @@ import Contact from './pages/contacts'
         path: 'contacts',
         element: <Contact/>,
         // errorElement: <Error />,
+      }, {
+        path: 'Explore',
+        element: <Explore/>,
+        // errorElement: <Error />,
       }
+      
       
       
       
