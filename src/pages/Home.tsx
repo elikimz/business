@@ -51,9 +51,6 @@ const Home = () => {
               <li>
                 <Link to="/contacts" className="text-[#e74c3c] hover:text-[#ecf0f1]">Contact</Link>
               </li>
-              <li>
-                <Link to="/Explore" className="text-[#e74c3c] hover:text-[#ecf0f1]">Contact</Link>
-              </li>
             </ul>
           </nav>
         </div>

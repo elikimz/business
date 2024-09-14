@@ -3,7 +3,7 @@ import Home  from './pages/Home'
 import Shop from'./pages/shop'
 import AboutUs from './pages/about'
 import Contact from './pages/contacts'
-import Explore from './pages/explor'
+// import Explore from './pages/explor'
 
 
 
@@ -30,11 +30,12 @@ import Explore from './pages/explor'
         path: 'contacts',
         element: <Contact/>,
         // errorElement: <Error />,
-      }, {
-        path: 'Explore',
-        element: <Explore/>,
-        // errorElement: <Error />,
-      }
+      },
+      //  {
+      //   path: 'Explore',
+      //   element: <Explore/>,
+      //   // errorElement: <Error />,
+      // }
       
       
       
