@@ -40,13 +40,13 @@ const Contact: React.FC = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 5h18M3 10h18M3 15h18M3 20h18" />
               </svg>
-              <p className="text-lg">+1 (555) 123-4567</p>
+              <p className="text-lg">+254-706560028</p>
             </div>
             <div className="flex items-center justify-center space-x-4">
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 7h18M3 12h18M3 17h18" />
               </svg>
-              <p className="text-lg">contact@business.com</p>
+              <p className="text-lg">christaron091@gmail.com</p>
             </div>
           </div>
         </motion.div>

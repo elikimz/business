@@ -4,6 +4,7 @@ import Shop from'./pages/shop'
 import AboutUs from './pages/about'
 import Contact from './pages/contacts'
 // import Explore from './pages/explor'
+import LocationPage from './pages/location'
 
 
 
@@ -31,11 +32,11 @@ import Contact from './pages/contacts'
         element: <Contact/>,
         // errorElement: <Error />,
       },
-      //  {
-      //   path: 'Explore',
-      //   element: <Explore/>,
-      //   // errorElement: <Error />,
-      // }
+       {
+        path: 'LocationPage',
+        element: <LocationPage/>,
+        // errorElement: <Error />,
+      }
       
       
       

@@ -14,7 +14,7 @@ function Footer() {
             <p>Follow us on social media</p>
           </div>
           <div className="mb-2">
-            <p>Contact us: <a href="mailto:info@carpetworld.com" className="text-[#e74c3c]">info@carpetworld.com</a></p>
+            <p>Contact us: <a href="mailto:info@carpetworld.com" className="text-[#e74c3c]">christaron091@gmail.com</a></p>
           </div>
           <div className="mt-4">
             <p>&copy; {new Date().getFullYear()} Carpet World. All rights reserved.</p>
