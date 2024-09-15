@@ -6,9 +6,8 @@ import { motion } from 'framer-motion';
 
 // Array of background images
 const backgroundImages = [
-  // 'https://media.istockphoto.com/id/501747566/photo/carpet-rolls.jpg?s=1024x1024&w=is&k=20&c=HKshcmkCulodFi3TZeZBJ1nbswzBPvXi1CctrnItI_k=',
- 'https://imgs.search.brave.com/YIVPyBwU5S9dTsHkNiiyy5s4VYLx1jYKF6oCyJClSko/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLmpw/Zw',
-'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw'
+  'https://imgs.search.brave.com/YIVPyBwU5S9dTsHkNiiyy5s4VYLx1jYKF6oCyJClSko/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLmpw/Zw',
+  'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw'
 ];
 
 const Home = () => {
@@ -29,7 +28,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Hamburger Menu Button for Mobile */}
           <button
             className="text-[#e74c3c] block sm:hidden focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -50,7 +48,6 @@ const Home = () => {
             </svg>
           </button>
 
-          {/* Nav Links */}
           <nav
             className={`${
               isMenuOpen ? 'block' : 'hidden'
