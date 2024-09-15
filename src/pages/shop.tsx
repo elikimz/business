@@ -2,12 +2,14 @@ import React from 'react';
 
 const Shop: React.FC = () => {
   const products = [
-    { id: 1, name: 'Luxury Carpet', price: '$200', image: 'https://imgs.search.brave.com/eO8Jo46_PQi_Qf_xvquX_WpOgzkb27DAaFoVkws6gx4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIx/NjQ3NjQ3L3Bob3Rv/L2NhcnBldHMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUM2/SXRWcE01ZGJKdzlC/THA3MVExXzRqMFBR/NzVuaUJ3M1RGQ3dX/TzR6RGs9' },
-    { id: 2, name: 'Modern Mat', price: '$50', image: 'https://imgs.search.brave.com/eO8Jo46_PQi_Qf_xvquX_WpOgzkb27DAaFoVkws6gx4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIx/NjQ3NjQ3L3Bob3Rv/L2NhcnBldHMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUM2/SXRWcE01ZGJKdzlC/THA3MVExXzRqMFBR/NzVuaUJ3M1RGQ3dX/TzR6RGs9' },
+    { id: 1, name: 'Luxury Carpet', price: '$200', image: 'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw' },
+    { id: 2, name: 'Modern Mat', price: '$50', image: 'https://imgs.search.brave.com/uFA00s4agw0vLosGCP29VdcETABSiaFCEXO1TyH2isg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly96aW1j/b21wYXNzLmFwLXNv/dXRoLTEubGlub2Rl/b2JqZWN0cy5jb20v/emltY29tcGFzcy1w/cm9kdWN0XzAxZDg2/Mzg0ODMyMjc0ODIw/OTE3ODAuanBn' },
     { id: 3, name: 'Luxury Carpet', price: '$200', image: 'https://imgs.search.brave.com/eO8Jo46_PQi_Qf_xvquX_WpOgzkb27DAaFoVkws6gx4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTIx/NjQ3NjQ3L3Bob3Rv/L2NhcnBldHMuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUM2/SXRWcE01ZGJKdzlC/THA3MVExXzRqMFBR/NzVuaUJ3M1RGQ3dX/TzR6RGs9' },
     { id: 4, name: 'Luxury Carpet', price: '$200', image: 'https://target.scene7.com/is/image/Target/GUEST_80def083-9647-4bbb-afa2-5e8690eb543f?wid=1200&hei=1200&qlt=80&fmt=webp' },
     { id: 5, name: 'Luxury Carpet', price: '$200', image: 'https://target.scene7.com/is/image/Target/GUEST_0f2b981d-480d-418d-a4c2-5ffa1f469acf?wid=1200&hei=1200&qlt=80&fmt=webp' },
     { id: 6, name: 'Luxury Carpet', price: '$200', image: 'https://target.scene7.com/is/image/Target/GUEST_7a78cd0d-07fa-4eee-a2fa-45ef8d5a61db?wid=1200&hei=1200&qlt=80&fmt=webp' },
+    
+    
     // Add more products if needed
   ];
 
