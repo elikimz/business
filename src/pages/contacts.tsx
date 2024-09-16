@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
 
       {/* Hamburger Menu for Mobile */}
       <button
-        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30" // Increased z-index
+        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <svg
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static bg-white sm:bg-transparent p-4 sm:p-0 z-20`} // Adjusted z-index and background color for visibility
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 sm:p-0 z-20`}
       >
         <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
           <li>

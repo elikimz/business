@@ -41,7 +41,7 @@ const Shop: React.FC = () => {
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static bg-white sm:bg-transparent p-4 sm:p-0 z-20`}
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 sm:p-0 z-20`}
       >
         <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
           <li>
@@ -90,22 +90,8 @@ const Shop: React.FC = () => {
                   className="w-full h-40 object-cover rounded-lg transition-transform duration-500 transform hover:scale-110"
                 />
               </div>
-              {/* Add to Cart Button */}
-              {/* <button className="mt-4 px-3 py-1 bg-yellow-500 text-gray-800 font-semibold rounded-md hover:bg-yellow-600 transition-colors text-sm">
-                Add to Cart
-              </button> */}
             </div>
           ))}
-        </div>
-
-        {/* Back to Home Button */}
-        <div className="mt-8 text-center">
-          {/* <Link
-            to="/"
-            className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
-          >
-            Back to Home
-          </Link> */}
         </div>
       </div>
     </div>

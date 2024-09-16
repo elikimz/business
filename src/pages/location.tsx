@@ -28,7 +28,7 @@ const Location: React.FC = () => {
         </svg>
       </button>
 
-      {/* Navigation Menu */}
+      {/* Navigation Menu
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
@@ -61,7 +61,7 @@ const Location: React.FC = () => {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Navigation Buttons in Horizontal Layout */}
