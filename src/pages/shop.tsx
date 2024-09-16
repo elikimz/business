@@ -13,8 +13,19 @@ const Shop: React.FC = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gray-100"> {/* Solid background color */}
+    <div className="relative overflow-hidden bg-gray-100">
       <div className="container mx-auto py-12 px-4 relative z-10">
+        {/* Navigation Buttons in Horizontal Layout */}
+        <div className="text-center mb-8">
+          <nav className="inline-flex space-x-6">
+            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
+            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
+            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
+            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
+            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
+          </nav>
+        </div>
+
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Our Products</h1>
         
         {/* Product Grid */}
@@ -32,18 +43,22 @@ const Shop: React.FC = () => {
                   className="w-full h-40 object-cover rounded-lg transition-transform duration-500 transform hover:scale-110"
                 />
               </div>
+              {/* Add to Cart Button */}
+              {/* <button className="mt-4 px-3 py-1 bg-yellow-500 text-gray-800 font-semibold rounded-md hover:bg-yellow-600 transition-colors text-sm">
+                Add to Cart
+              </button> */}
             </div>
           ))}
         </div>
 
         {/* Back to Home Button */}
         <div className="mt-8 text-center">
-          <Link
+          {/* <Link
             to="/"
             className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
           >
             Back to Home
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

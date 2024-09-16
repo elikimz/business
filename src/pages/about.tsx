@@ -31,6 +31,17 @@ const AboutUs: React.FC = () => {
       {/* Background Color */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-blue-100 via-teal-100 to-blue-200 opacity-70" />
 
+      {/* Navigation Buttons */}
+      <div className="text-center mb-8">
+        <nav className="inline-flex space-x-6">
+          <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
+          <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
+          <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
+          <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
+          <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
+        </nav>
+      </div>
+
       <div className="container mx-auto py-12 px-4 relative z-10 flex flex-col items-center border-4 border-teal-900 rounded-lg shadow-lg bg-white bg-opacity-70 backdrop-blur-lg">
         <h1 className="text-4xl font-bold text-center mb-8 text-teal-900">
           About Us
@@ -54,15 +65,14 @@ const AboutUs: React.FC = () => {
         </div>
 
         {/* Back to Home Button */}
-        <Link
-            to="/"
-            className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
-          >
-            Back to Home
-          </Link>
-        </div>
+        {/* <Link
+          to="/"
+          className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
+        >
+          Back to Home
+        </Link> */}
       </div>
-   
+    </div>
   );
 };
 

@@ -20,6 +20,17 @@ const Contact: React.FC = () => {
         }}
       />
 
+      {/* Navigation Buttons */}
+      <div className="text-center mb-8">
+        <nav className="inline-flex space-x-6">
+          <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
+          <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
+          <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
+          <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
+          <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
+        </nav>
+      </div>
+
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.h1
@@ -76,14 +87,14 @@ const Contact: React.FC = () => {
         </motion.div>
 
         {/* Back to Home Button */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <Link
             to="/"
             className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
           >
             Back to Home
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
