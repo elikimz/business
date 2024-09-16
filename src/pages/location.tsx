@@ -1,14 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Location: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
+
   return (
     <div className="relative bg-gradient-to-r from-teal-200 via-teal-100 to-teal-50 overflow-hidden py-12">
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Hamburger Menu for Mobile */}
+      <button
+        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
 
-        {/* Navigation Buttons */}
-        <div className="text-center mb-8">
+      {/* Navigation Menu */}
+      <nav
+        className={`${
+          isMenuOpen ? 'block' : 'hidden'
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static bg-white sm:bg-transparent p-4 sm:p-0 z-20`}
+      >
+        <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+          <li>
+            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Location
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Navigation Buttons in Horizontal Layout */}
+        <div className="text-center mb-8 hidden sm:block">
           <nav className="inline-flex space-x-6">
             <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
             <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>

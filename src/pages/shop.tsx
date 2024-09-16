@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Shop: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
+
   const products = [
     { id: 1, image: 'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw' },
     { id: 2, image: 'https://imgs.search.brave.com/uFA00s4agw0vLosGCP29VdcETABSiaFCEXO1TyH2isg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly96aW1j/b21wYXNzLmFwLXNv/dXRoLTEubGlub2Rl/b2JqZWN0cy5jb20v/emltY29tcGFzcy1w/cm9kdWN0XzAxZDg2/Mzg0ODMyMjc0ODIw/OTE3ODAuanBn' },
@@ -14,18 +16,63 @@ const Shop: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden bg-gray-100">
-      <div className="container mx-auto py-12 px-4 relative z-10">
-        {/* Navigation Buttons in Horizontal Layout */}
-        <div className="text-center mb-8">
-          <nav className="inline-flex space-x-6">
-            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
-            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
-            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
-            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
-            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
-          </nav>
-        </div>
+      {/* Hamburger Menu for Mobile */}
+      <button
+        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
 
+      {/* Navigation Menu */}
+      <nav
+        className={`${
+          isMenuOpen ? 'block' : 'hidden'
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static bg-white sm:bg-transparent p-4 sm:p-0 z-20`}
+      >
+        <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+          <li>
+            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Location
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="container mx-auto py-12 px-4 relative z-10">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Our Products</h1>
         
         {/* Product Grid */}
