@@ -28,11 +28,11 @@ const Location: React.FC = () => {
         </svg>
       </button>
 
-      {/* Navigation Menu
+      {/* Navigation Menu */}
       <nav
         className={`${
           isMenuOpen ? 'block' : 'hidden'
-        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static bg-white sm:bg-transparent p-4 sm:p-0 z-20`}
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 sm:p-0 z-20`}
       >
         <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
           <li>
@@ -61,20 +61,9 @@ const Location: React.FC = () => {
             </Link>
           </li>
         </ul>
-      </nav> */}
+      </nav>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Navigation Buttons in Horizontal Layout */}
-        <div className="text-center mb-8 hidden sm:block">
-          <nav className="inline-flex space-x-6">
-            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
-            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
-            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
-            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
-            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
-          </nav>
-        </div>
-
         {/* Title */}
         <h1 className="text-4xl font-bold text-center mb-8 text-teal-900">
           Our Location
@@ -83,7 +72,7 @@ const Location: React.FC = () => {
         {/* Description */}
         <div className="text-center mb-8">
           <p className="text-lg text-teal-800 max-w-3xl mx-auto">
-            Visit us at Maasai Lodge, Mayor Road, Building Name:  Gaia's Domain. Our office is located in a prime area with easy access and great visibility.
+            Visit us at Maasai Lodge, Mayor Road, Building Name: Gaia's Domain. Our office is located in a prime area with easy access and great visibility.
           </p>
         </div>
 
@@ -128,13 +117,6 @@ const Location: React.FC = () => {
             For more details or to schedule a visit, please contact us at :+254-706560028.
           </p>
         </div>
-
-        {/* Back to Home Button */}
-        {/* <div className="text-center mt-6">
-          <Link to="/" className="px-6 py-3 bg-yellow-500 text-gray-800 font-semibold rounded-lg hover:bg-yellow-600 transition-colors text-lg shadow-md">
-            Back to Home
-          </Link>
-        </div> */}
       </div>
     </div>
   );
