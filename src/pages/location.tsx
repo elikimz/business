@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Location: React.FC = () => {
@@ -53,6 +54,13 @@ const Location: React.FC = () => {
           <p className="text-lg text-teal-800 mt-4">
             For more details or to schedule a visit, please contact us at [your contact information].
           </p>
+        </div>
+
+        {/* Back to Home Button */}
+        <div className="text-center mt-6">
+          <Link to="/" className="px-6 py-3 bg-yellow-500 text-gray-800 font-semibold rounded-lg hover:bg-yellow-600 transition-colors text-lg shadow-md">
+            Back to Home
+          </Link>
         </div>
       </div>
     </div>

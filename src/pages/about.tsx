@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -37,7 +38,7 @@ const AboutUs: React.FC = () => {
         <p className="text-lg text-teal-800 max-w-3xl mx-auto text-center mb-8">
           We are a company dedicated to providing the highest quality carpets and mats to enhance the beauty and comfort of your home or office. Our mission is to offer a wide variety of designs to match any aesthetic, along with excellent customer service.
         </p>
-        <div className="w-full max-w-3xl h-80">
+        <div className="w-full max-w-3xl h-80 mb-8">
           <Slider {...settings} className="w-full h-full">
             {images.map((src, index) => (
               <div key={index} className="w-full h-full relative overflow-hidden rounded-lg shadow-lg">
@@ -45,13 +46,23 @@ const AboutUs: React.FC = () => {
                   src={src}
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             ))}
           </Slider>
         </div>
+
+        {/* Back to Home Button */}
+        <Link
+            to="/"
+            className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
+          >
+            Back to Home
+          </Link>
+        </div>
       </div>
-    </div>
+   
   );
 };
 
