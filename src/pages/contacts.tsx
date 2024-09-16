@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
+
   return (
     <div className="relative min-h-screen py-12 px-4">
       {/* Background Image */}
@@ -20,19 +22,64 @@ const Contact: React.FC = () => {
         }}
       />
 
-      {/* Navigation Buttons */}
-      <div className="text-center mb-8">
-        <nav className="inline-flex space-x-6">
-          <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Home</Link>
-          <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Shop</Link>
-          <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">About</Link>
-          <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Contact</Link>
-          <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">Location</Link>
-        </nav>
-      </div>
+      {/* Hamburger Menu for Mobile */}
+      <button
+        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-20"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+        </svg>
+      </button>
+
+      {/* Navigation Menu */}
+      <nav
+        className={`${
+          isMenuOpen ? 'block' : 'hidden'
+        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-12 right-6 sm:static`}
+      >
+        <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+          <li>
+            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Shop
+            </Link>
+          </li>
+          <li>
+            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
+              Location
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center mt-8">
         <motion.h1
           className="text-4xl font-bold mb-8 text-red-500 drop-shadow-lg"
           initial={{ y: -50, opacity: 0 }}
@@ -85,16 +132,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Back to Home Button */}
-        {/* <div className="mt-8">
-          <Link
-            to="/"
-            className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
-          >
-            Back to Home
-          </Link>
-        </div> */}
       </div>
     </div>
   );
