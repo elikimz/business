@@ -143,7 +143,7 @@ const Home = () => {
           </p>
           <Link
             to="/shop"
-            className="px-6 py-2 sm:px-8 sm:py-3 bg-[#e74c3c] text-white font-bold rounded-md hover:bg-[#c0392b] transition-transform transform hover:scale-105"
+            className="px-6 py-2 sm:px-8 sm:py-3 bg-[#e74c3c] text-white font-bold rounded-md hover:bg-[#ac4135] transition-transform transform hover:scale-105"
           >
             Explore Now
           </Link>
