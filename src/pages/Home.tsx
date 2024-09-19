@@ -17,11 +17,12 @@ const Home = () => {
 
   return (
     <>
-      <header className="w-full py-6 bg-[#2c3e50] shadow-lg">
+      <header className="w-full py-6 bg-[#273747] shadow-lg">
         <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
           <div className="flex items-center">
             <img
               src="https://via.placeholder.com/50"
+              
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
