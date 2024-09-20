@@ -26,7 +26,7 @@ const Home = () => {
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e74c3c]">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8f463e]">
               Gaia's Domain
             </div>
           </div>
