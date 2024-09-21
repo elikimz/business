@@ -126,7 +126,7 @@ const Location: React.FC = () => {
         {/* Location Info */}
         <div className="text-center">
           <p className="text-lg text-[#2c3e50]">
-            Address: Maasai Lodge, Mayor Road, Building Name: Gemark
+            Address: Maasai Lodge, Mayor Road, Building Name:The Boma Apartments
           </p>
           <p className="text-lg text-[#2c3e50] mt-4">
             For more details or to schedule a visit, please contact us at: +254-706560028.

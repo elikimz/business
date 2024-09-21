@@ -99,11 +99,11 @@ const Home = () => {
       <section className="relative w-full h-[75vh] sm:h-[80vh] md:h-screen overflow-hidden">
         <motion.div
           className="absolute inset-0"
-          key={currentImageIndex} // This ensures a new image component is rendered each time
+          key={currentImageIndex} 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1 }} // Fade effect duration
+          transition={{ duration: 1 }} 
           style={{
             backgroundImage: `url(${backgroundImages[currentImageIndex]})`,
             backgroundSize: 'cover',

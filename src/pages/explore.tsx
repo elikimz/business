@@ -152,7 +152,7 @@ const Explore: React.FC = () => {
                 <h3 className="text-lg font-bold mt-2">{product.name}</h3>
                 <p className="text-gray-600">{product.description}</p>
                 {activeIndex === index && (
-                  <p className="mt-2 text-gray-700">{product.moreDetails}</p>
+                  <p className="mt-2 text-[#3498db]">{product.moreDetails}</p> // Changed to blue
                 )}
                 <button 
                   onClick={() => toggleDetails(index)} 

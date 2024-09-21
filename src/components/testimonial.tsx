@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: 'Alice Johnson',
     message: 'The carpets are of high quality and transformed my living room!',
-    photo: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+    photo: 'https://i.postimg.cc/rFR2yQBn/3d-carton-of-boy-going-to-school-ai-photo.jpg'
   },
   {
     name: 'Michael Lee',
@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: 'Sarah Wilson',
     message: 'Beautiful mats with great durability. I will definitely buy again.',
-    photo: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+    photo: 'https://i.postimg.cc/fRx4mkTY/imagesdd.jpg'
   }
 ];
 
