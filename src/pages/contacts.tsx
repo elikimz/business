@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
         transition={{ duration: 3, ease: "easeInOut" }}
         style={{
           backgroundImage:
-            'url(https://plus.unsplash.com/premium_photo-1683141361371-8028cd2c0ac8?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)',
+            'url(https://i.postimg.cc/XJ7Gk71H/image.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -27,11 +27,11 @@ const Contact: React.FC = () => {
         <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
           <div className="flex items-center">
             <img
-              src="https://via.placeholder.com/50"
+              src="https://i.postimg.cc/9McRB3Bf/carpet-men-vector-49232037.webp"
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8f463e]">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e74c3c]">
               Gaia's Domain
             </div>
           </div>

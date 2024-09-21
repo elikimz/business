@@ -20,11 +20,11 @@ const Shop: React.FC = () => {
         <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
           <div className="flex items-center">
             <img
-              src="https://via.placeholder.com/50"
+              src="https://i.postimg.cc/9McRB3Bf/carpet-men-vector-49232037.webp"
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
-            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8f463e]">
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#e74c3c]">
               Gaia's Domain
             </div>
           </div>

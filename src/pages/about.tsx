@@ -31,7 +31,7 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
           <div className="flex items-center">
             <img
-              src="https://via.placeholder.com/50"
+              src="https://i.postimg.cc/9McRB3Bf/carpet-men-vector-49232037.webp"
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
@@ -100,27 +100,26 @@ const AboutUs: React.FC = () => {
 
       {/* Main Content */}
       <div className="relative overflow-hidden py-12 bg-gradient-to-r from-blue-100 via-teal-100 to-blue-200">
-        <div className="container mx-auto py-12 px-4 relative z-10 flex flex-col items-center border-4 border-teal-900 rounded-lg shadow-lg bg-white bg-opacity-70 backdrop-blur-lg">
-          <h1 className="text-4xl font-bold text-center mb-8 text-teal-900">
+        <div className="container mx-auto flex flex-col items-center">
+          <h1 className="text-3xl font-bold text-center mb-6 text-teal-900">
             About Us
           </h1>
-          <p className="text-lg text-teal-800 max-w-3xl mx-auto text-center mb-8">
+          <p className="text-lg text-teal-800 max-w-3xl mx-auto text-center mb-6">
             We are a company dedicated to providing the highest quality carpets and mats to enhance the beauty and comfort of your home or office. Our mission is to offer a wide variety of designs to match any aesthetic, along with excellent customer service.
           </p>
-          <div className="w-full max-w-3xl h-80 mb-8">
+          <div className="square-card w-full max-w-2xl mb-8 relative">
             <Slider {...settings} className="w-full h-full">
               {images.map((src, index) => (
-                <div key={index} className="w-full h-full relative overflow-hidden rounded-lg shadow-lg">
+                <div key={index} className="w-full h-full relative">
                   <img
                     src={src}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </Slider>
           </div>
-        
         </div>
       </div>
     </>
