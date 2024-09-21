@@ -120,14 +120,7 @@ const AboutUs: React.FC = () => {
               ))}
             </Slider>
           </div>
-
-          {/* Back to Home Button */}
-          <Link
-            to="/"
-            className="px-6 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105"
-          >
-            Back to Home
-          </Link>
+        
         </div>
       </div>
     </>

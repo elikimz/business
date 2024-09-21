@@ -3,7 +3,7 @@ import Home  from './pages/Home'
 import Shop from'./pages/shop'
 import AboutUs from './pages/about'
 import Contact from './pages/contacts'
-// import Explore from './pages/explor'
+ import Explore from './pages/explore'
 import LocationPage from './pages/location'
 
 
@@ -35,6 +35,11 @@ import LocationPage from './pages/location'
        {
         path: 'LocationPage',
         element: <LocationPage/>,
+        // errorElement: <Error />,
+      },
+      {
+        path: 'Explore',
+        element: <Explore/>,
         // errorElement: <Error />,
       }
       

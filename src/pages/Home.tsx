@@ -1,19 +1,28 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Testimonials from '../components/testimonial';
 import Footer from '../components/footer';
 import { motion } from 'framer-motion';
 
 // Array of background images
 const backgroundImages = [
-  'https://imgs.search.brave.com/YIVPyBwU5S9dTsHkNiiyy5s4VYLx1jYKF6oCyJClSko/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLmpw/Zw',
-  'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw',
-  'https://imgs.search.brave.com/s8aIwf6x5HXHm_eci8EuBevyZ4_h5qWhVe1U4Iez5vE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kYXp6/bGluZ2RlY29yLmNv/LmtlL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzAyL0ZsdWZm/eS1jYXJwZXRzLTIt/MS0zMDB4MzAwLmpw/Zw'
-  
+  'https://i.postimg.cc/XJ7Gk71H/image.webp',
+  'https://i.postimg.cc/wTmb56mQ/Pre-Launch-Blog-Geometric.jpg',
+  'https://i.postimg.cc/xjJS7Vmc/How-to-choose-a-patterned-carpet.jpg',
 ];
 
 const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Automatically switch images every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % backgroundImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(intervalId); // Clear interval on component unmount
+  }, []);
 
   return (
     <>
@@ -22,7 +31,6 @@ const Home = () => {
           <div className="flex items-center">
             <img
               src="https://via.placeholder.com/50"
-              
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
@@ -78,10 +86,7 @@ const Home = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/LocationPage"
-                  className="text-[#e74c3c] hover:text-[#ecf0f1]"
-                >
+                <Link to="/LocationPage" className="text-[#e74c3c] hover:text-[#ecf0f1]">
                   Location
                 </Link>
               </li>
@@ -92,29 +97,19 @@ const Home = () => {
 
       {/* Hero Section with Animated Background */}
       <section className="relative w-full h-[75vh] sm:h-[80vh] md:h-screen overflow-hidden">
-        {/* Background Animation */}
         <motion.div
-          className="absolute inset-0 flex"
-          initial={{ x: '-100%' }}
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{
-            duration: 20,
-            ease: 'linear',
-            repeat: Infinity,
+          className="absolute inset-0"
+          key={currentImageIndex} // This ensures a new image component is rendered each time
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }} // Fade effect duration
+          style={{
+            backgroundImage: `url(${backgroundImages[currentImageIndex]})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
-        >
-          {backgroundImages.map((url, index) => (
-            <motion.div
-              key={index}
-              className="w-full h-full flex-shrink-0"
-              style={{
-                backgroundImage: `url(${url})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-          ))}
-        </motion.div>
+        />
 
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center p-4 sm:p-6 z-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#e74c3c] mb-4 text-center">
@@ -143,7 +138,7 @@ const Home = () => {
             your home’s beauty and comfort.
           </p>
           <Link
-            to="/shop"
+            to="/Explore"
             className="px-6 py-2 sm:px-8 sm:py-3 bg-[#e74c3c] text-white font-bold rounded-md hover:bg-[#ac4135] transition-transform transform hover:scale-105"
           >
             Explore Now

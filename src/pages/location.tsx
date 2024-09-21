@@ -1,78 +1,93 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Location: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control menu visibility
 
   return (
-    <div className="relative bg-gradient-to-r from-teal-200 via-teal-100 to-teal-50 overflow-hidden py-12">
-      {/* Hamburger Menu for Mobile */}
-      <button
-        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
-
+    <div className="relative bg-[#ecf0f1] overflow-hidden py-12">
       {/* Navigation Menu */}
-      <nav
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 sm:p-0 z-20`}
-      >
-        <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
-          <li>
-            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Location
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <header className="w-full fixed top-0 left-0 py-6 bg-[#273747] shadow-lg z-30">
+        <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+          <div className="flex items-center">
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Carpet Logo"
+              className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
+            />
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8f463e]">
+              Gaia's Domain
+            </div>
+          </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+          {/* Hamburger Menu for Mobile */}
+          <button
+            className="text-[#e74c3c] block sm:hidden focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <nav
+            className={`${
+              isMenuOpen ? 'block' : 'hidden'
+            } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 text-center sm:text-left`}
+          >
+            <ul className="space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-8 flex flex-col sm:flex-row">
+              <li>
+                <Link to="/" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Shop
+                </Link>
+              </li>
+              <li>
+                <Link to="/AboutUs" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contacts" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/LocationPage" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Location
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div className="container mx-auto px-4 relative z-10 mt-20">
         {/* Title */}
-        <h1 className="text-4xl font-bold text-center mb-8 text-teal-900">
+        <h1 className="text-4xl font-bold text-center mb-8 text-[#8f463e]">
           Our Location
         </h1>
 
         {/* Description */}
         <div className="text-center mb-8">
-          <p className="text-lg text-teal-800 max-w-3xl mx-auto">
-            Visit us at Maasai Lodge, Mayor Road, Building Name: Gaia's Domain. Our office is located in a prime area with easy access and great visibility.
+          <p className="text-lg text-[#2c3e50] max-w-3xl mx-auto">
+            Visit us at Maasai Lodge, Mayor Road, Building Name: The Boma Apartments. Our office is located in a prime area with easy access and great visibility.
           </p>
         </div>
 
@@ -85,7 +100,7 @@ const Location: React.FC = () => {
             className="inline-block w-full max-w-lg h-64 overflow-hidden rounded-lg shadow-lg mb-8"
           >
             <img
-              src="https://landlords.rentershub.co.ke/propertyimages/330367049_1245227673017020_2762000051783773838_n.jpg"
+              src="https://i.postimg.cc/P53PfMFJ/boma.jpg"
               alt="Building"
               className="w-full h-full object-cover"
             />
@@ -110,11 +125,11 @@ const Location: React.FC = () => {
 
         {/* Location Info */}
         <div className="text-center">
-          <p className="text-lg text-teal-800">
+          <p className="text-lg text-[#2c3e50]">
             Address: Maasai Lodge, Mayor Road, Building Name: Gemark
           </p>
-          <p className="text-lg text-teal-800 mt-4">
-            For more details or to schedule a visit, please contact us at :+254-706560028.
+          <p className="text-lg text-[#2c3e50] mt-4">
+            For more details or to schedule a visit, please contact us at: +254-706560028.
           </p>
         </div>
       </div>

@@ -22,64 +22,78 @@ const Contact: React.FC = () => {
         }}
       />
 
-      {/* Hamburger Menu for Mobile */}
-      <button
-        className="text-gray-800 block sm:hidden focus:outline-none absolute top-6 right-6 z-30"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          />
-        </svg>
-      </button>
-
       {/* Navigation Menu */}
-      <nav
-        className={`${
-          isMenuOpen ? 'block' : 'hidden'
-        } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left absolute top-6 left-1/2 transform -translate-x-1/2 bg-white p-4 sm:p-0 z-20`}
-      >
-        <ul className="space-y-2 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
-          <li>
-            <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/shop" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link to="/AboutUs" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contacts" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link to="/LocationPage" className="text-xl font-semibold text-gray-800 hover:text-gray-600">
-              Location
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <header className="w-full fixed top-0 left-0 py-6 bg-[#273747] shadow-lg z-30">
+        <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+          <div className="flex items-center">
+            <img
+              src="https://via.placeholder.com/50"
+              alt="Carpet Logo"
+              className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
+            />
+            <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#8f463e]">
+              Gaia's Domain
+            </div>
+          </div>
+
+          <button
+            className="text-[#e74c3c] block sm:hidden focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+
+          <nav
+            className={`${
+              isMenuOpen ? 'block' : 'hidden'
+            } sm:flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 md:space-x-6 text-center sm:text-left`}
+          >
+            <ul className="space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-8 flex flex-col sm:flex-row">
+              <li>
+                <Link to="/" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/shop" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Shop
+                </Link>
+              </li>
+              <li>
+                <Link to="/AboutUs" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contacts" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/LocationPage" className="text-[#e74c3c] hover:text-[#ecf0f1]">
+                  Location
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center mt-8">
+      <div className="relative z-10 max-w-4xl mx-auto text-center mt-20">
         <motion.h1
           className="text-4xl font-bold mb-8 text-red-500 drop-shadow-lg"
           initial={{ y: -50, opacity: 0 }}

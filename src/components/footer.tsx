@@ -17,7 +17,7 @@ function Footer() {
             <p>Contact us: <a href="mailto:info@carpetworld.com" className="text-[#e74c3c]">christaron091@gmail.com</a></p>
           </div>
           <div className="mt-4">
-            <p>&copy; {new Date().getFullYear()} Carpet World. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Gaia's Domain. All rights reserved.</p>
           </div>
         </div>
       </footer>
