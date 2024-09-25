@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 // Array of background images
 const backgroundImages = [
-  'https://i.postimg.cc/XJ7Gk71H/image.webp',
-  'https://i.postimg.cc/wTmb56mQ/Pre-Launch-Blog-Geometric.jpg',
+  'https://i.postimg.cc/28Y62p4h/ia.jpg',
+  'https://i.postimg.cc/02Ng8cvh/ai2.jpg',
   'https://i.postimg.cc/xjJS7Vmc/How-to-choose-a-patterned-carpet.jpg',
 ];
 
