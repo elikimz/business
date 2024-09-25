@@ -91,7 +91,7 @@ const Explore: React.FC = () => {
         <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
           <div className="flex items-center">
             <img
-              src="https://i.postimg.cc/9McRB3Bf/carpet-men-vector-49232037.webp"
+              src="https://i.postimg.cc/28Y62p4h/ia.jpg"
               alt="Carpet Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-3"
             />
