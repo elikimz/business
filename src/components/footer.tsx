@@ -25,7 +25,7 @@ function Footer() {
         <div className="mt-4">
           <p>
             Powered by{' '}
-            <a href="mailto:elijahkimani1293@gmail.com" className="text-[#e74c3c]">
+            <a href="mailto:elijahkimani1293@gmail.com" className="text-[#e64c3b]">
               KimTech Limited
             </a>
           </p>
